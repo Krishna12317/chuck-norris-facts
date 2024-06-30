@@ -12,3 +12,21 @@ export interface IChuckNorrisApiResponse {
     total: number;
     result: IChuckNorrisFact[];
 }
+
+export interface ISearchFactContext {
+    query: string;
+    setQuery: React.Dispatch<React.SetStateAction<string>>;
+    facts: IChuckNorrisFact[];
+    loading: boolean;
+    error: string | null;
+    currentFactIndex: number;
+    setCurrentFactIndex: React.Dispatch<React.SetStateAction<number>>;
+    handleSearch: () => void;
+    handleNextFact: () => void;
+    handlePreviousFact: () => void;
+}
+
+export interface IThemeContext {
+    theme: "light" | "dark";
+    toggleTheme: () => void;
+}
