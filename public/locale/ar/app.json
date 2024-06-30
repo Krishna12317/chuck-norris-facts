@@ -1,0 +1,16 @@
+{
+    "appTitle": "حقائق تشاك نوريس",
+    "searchPlaceholder": "ابحث عن حقائق تشاك نوريس",
+    "searchButton": "بحث",
+    "nextButton": "التالي",
+    "previousButton": "السابق",
+    "noFactsFound": "لم يتم العثور على حقائق",
+    "factNumber": "حقيقة {{current}} ل {{total}}",
+    "darkMode": "الوضع الداكن",
+    "lightMode": "الوضع الفاتح",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "languageSelection": "اختر اللغة",
+    "errorFetchingFacts": "خطأ في جلب حقائق تشاك نوريس"
+}
+  

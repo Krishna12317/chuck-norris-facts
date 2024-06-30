@@ -1,0 +1,16 @@
+{
+    "appTitle": "Chuck Norris Facts",
+    "searchPlaceholder": "Search Chuck Norris Facts",
+    "searchButton": "Search",
+    "nextButton": "Next",
+    "previousButton": "Previous",
+    "noFactsFound": "No facts found",
+    "factNumber": "Fact {{current}} of {{total}}",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "english": "English",
+    "arabic": "Arabic",
+    "languageSelection": "Select Language",
+    "errorFetchingFacts": "Error fetching Chuck Norris facts"
+}
+  
