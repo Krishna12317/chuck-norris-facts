@@ -5,12 +5,15 @@
     "nextButton": "Next",
     "previousButton": "Previous",
     "noFactsFound": "No facts found",
-    "factNumber": "Fact {{current}} of {{total}}",
+    "factCount": "Fact {{current}} of {{total}}",
     "darkMode": "Dark Mode",
     "lightMode": "Light Mode",
     "english": "English",
     "arabic": "Arabic",
     "languageSelection": "Select Language",
-    "errorFetchingFacts": "Error fetching Chuck Norris facts"
+    "errorFetchingFacts": "Error fetching Chuck Norris facts",
+    "linkTitle": "Chuck Norris Jokes Api - JSON API for random Chuck Norris jokes",
+    "factNote": "You can use the left and right keys on your keyboard to navigate!",
+    "apiError": "Failed to fetch Chuck Norris facts. Please try again with at least 3 characters"
 }
   
