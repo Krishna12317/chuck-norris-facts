@@ -19,6 +19,7 @@ export const StyledSearchFactInput = styled.input`
   font-size: 16px;
   margin: 5px;
   border-radius: 5px;
+  font-family: Roboto;
   
   &:focus {
     outline: none;

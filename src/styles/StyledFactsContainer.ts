@@ -28,7 +28,7 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledItalicNote = styled.p`
-  margin: 0px;
+  margin: 0px 0px 20px 0px;
   color: #555;
   font-style: italic;
 `;

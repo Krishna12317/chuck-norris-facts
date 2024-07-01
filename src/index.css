@@ -82,11 +82,3 @@ body.dark-theme {
   color: #ffffff;
 }
 
-.loading-progress-bar {
-  background: inherit;
-}
-
-.loading-progress {
-  background: inherit;
-  color: inherit;
-}
