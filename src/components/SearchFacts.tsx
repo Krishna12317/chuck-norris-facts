@@ -19,7 +19,7 @@ export const SearchFact: React.FC = React.memo(() => {
 
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleKeyDown = useCallback(
+  const handleEnterKeyPress = useCallback(
     (event: KeyboardEvent) => {
       if (event.key === "Enter") {
         event.preventDefault();
@@ -33,12 +33,12 @@ export const SearchFact: React.FC = React.memo(() => {
   useEffect(() => {
     const inputElement = inputRef.current;
     if (inputElement) {
-      inputElement.addEventListener("keydown", handleKeyDown);
+      inputElement.addEventListener("keydown", handleEnterKeyPress);
       return () => {
-        inputElement.removeEventListener("keydown", handleKeyDown);
+        inputElement.removeEventListener("keydown", handleEnterKeyPress);
       };
     }
-  }, [handleKeyDown]);
+  }, [handleEnterKeyPress]);
 
   return (
     <StyledFlexContainer>
