@@ -18,7 +18,7 @@ export interface ISearchFactContext {
     setQuery: React.Dispatch<React.SetStateAction<string>>;
     facts: IChuckNorrisFact[];
     loading: boolean;
-    error: string | null;
+    error: string;
     setError: React.Dispatch<React.SetStateAction<string>>;
     currentFactIndex: number;
     setCurrentFactIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -31,4 +31,11 @@ export interface ISearchFactContext {
 export interface IThemeContext {
     theme: "light" | "dark";
     toggleTheme: () => void;
+}
+
+export interface ButtonProps {
+    title: string;
+    name: string;
+    onClick: () => void;
+    children: React.ReactNode;
 }
