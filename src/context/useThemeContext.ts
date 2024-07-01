@@ -10,4 +10,3 @@ export const useThemeContext = (): IThemeContext => {
     return context;
 };
 
-export default useThemeContext;

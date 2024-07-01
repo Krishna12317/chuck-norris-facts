@@ -1,4 +1,5 @@
 import React, { createContext, useState, useCallback, ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 import { fetchChuckNorrisFacts } from "../api/chuckNorrisAPI";
 import { IChuckNorrisFact, ISearchFactContext } from "../types";
 
@@ -12,8 +13,9 @@ export const SearchFactProvider: React.FC<{ children: ReactNode }> = ({
   const [query, setQuery] = useState<string>("");
   const [facts, setFacts] = useState<IChuckNorrisFact[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string>("");
   const [currentFactIndex, setCurrentFactIndex] = useState<number>(0);
+  const { t: translate } = useTranslation();
 
   const handleSearch = useCallback(async () => {
     try {
@@ -22,15 +24,13 @@ export const SearchFactProvider: React.FC<{ children: ReactNode }> = ({
       setFacts(fetchedFacts);
       setCurrentFactIndex(0);
       setLoading(false);
-      setError(null);
+      setError("");
     } catch (error) {
       setLoading(false);
-      setError(
-        "Failed to fetch Chuck Norris facts. Please try again with at least 3 characters"
-      );
+      setError(translate("apiError"));
       setFacts([]);
     }
-  }, [query]);
+  }, [query, translate]);
 
   const handleNextFact = useCallback(() => {
     setCurrentFactIndex((prevIndex) =>
@@ -50,8 +50,10 @@ export const SearchFactProvider: React.FC<{ children: ReactNode }> = ({
     facts,
     loading,
     error,
+    setError,
     currentFactIndex,
     setCurrentFactIndex,
+    setFacts,
     handleSearch,
     handleNextFact,
     handlePreviousFact,

@@ -19,8 +19,10 @@ export interface ISearchFactContext {
     facts: IChuckNorrisFact[];
     loading: boolean;
     error: string | null;
+    setError: React.Dispatch<React.SetStateAction<string>>;
     currentFactIndex: number;
     setCurrentFactIndex: React.Dispatch<React.SetStateAction<number>>;
+    setFacts: React.Dispatch<React.SetStateAction<IChuckNorrisFact[]>>;
     handleSearch: () => void;
     handleNextFact: () => void;
     handlePreviousFact: () => void;
